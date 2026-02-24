@@ -31,6 +31,12 @@ public class Compte {
         this.clients = new HashSet<>();
     }
 
+    @OneToMany(mappedBy = "compte")
+    private Set<Operation> operations = new HashSet<>();
+
+    public Set<Operation> getOperations() { return operations; }
+    public void setOperations(Set<Operation> operations) { this.operations = operations; }
+
     // --- Getters et Setters ---
 
     public Integer getId() { return id; }

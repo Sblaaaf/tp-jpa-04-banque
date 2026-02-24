@@ -11,6 +11,9 @@
         <class>banque.entite.Client</class>
         <class>banque.entite.Compte</class>
         <class>banque.entite.LivretA</class>
+        <class>banque.entite.AssuranceVie</class>
+        <class>banque.entite.Operation</class>
+        <class>banque.entite.Virement</class>
 
         <properties>
             <property name="hibernate.archive.autodetection" value="" />
