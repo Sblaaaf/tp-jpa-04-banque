@@ -16,16 +16,16 @@ public class Client {
     private String prenom;
     private LocalDate dateNaissance;
 
-    // 1. L'adresse est "embarquée" (ses colonnes seront directement dans la table CLIENT)
+    // Adresse "Embedded" (directement dans la table CLIENT)
     @Embedded
     private Adresse adresse;
 
-    // 2. Relation Plusieurs Clients -> 1 Banque
+    // Clients -> 1 Banque
     @ManyToOne
     @JoinColumn(name = "ID_BANQUE")
     private Banque banque;
 
-    // 3. Relation Plusieurs Clients <-> Plusieurs Comptes
+    // Plusieurs Clients <-> Plusieurs Comptes
     @ManyToMany
     @JoinTable(name = "CLIENT_COMPTE",
             joinColumns = @JoinColumn(name = "ID_CLIENT", referencedColumnName = "id"),

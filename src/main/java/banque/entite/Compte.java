@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-// On choisit la stratégie JOINED : une table COMPTE, une table LIVRETA, une table ASSURANCEVIE
+// JOINED : une table COMPTE, une table LIVRETA, une table ASSURANCEVIE
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Compte {
 
@@ -16,7 +16,7 @@ public class Compte {
     private String numero;
     private double solde;
 
-    // Relation bidirectionnelle avec Client
+    // Comptes <-> Clients
     @ManyToMany(mappedBy = "comptes")
     private Set<Client> clients;
 

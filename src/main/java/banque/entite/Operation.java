@@ -15,7 +15,7 @@ public class Operation {
     private double montant;
     private String motif;
 
-    // Relation Plusieurs Opérations -> 1 Compte
+    // Plusieurs Opérations -> 1 Compte
     @ManyToOne
     @JoinColumn(name = "ID_COMPTE")
     private Compte compte;
